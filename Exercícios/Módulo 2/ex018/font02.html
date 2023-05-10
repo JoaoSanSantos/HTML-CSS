@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fontes Externas</title>
+    <style>
+        @font-face{
+            font-family:'Hamburg';
+            src: url('Hamburg') format(truetype);
+            font-weight: normal;
+            font-style: normal;
+
+            /*Tipos de Format()
+            - Opentype (otf)
+            - Truetype(ttf)
+            - Embedded-opentype
+            - Truetype-aat
+            - svg */
+
+            /* básicamente é só baixar o arquivo, identificar o formato, colocar o arquivo na pasta e colocar no html @font-face, dessa forma você terá uma fonte externa. No font face a URL tem que ser o nome exato do arquivo, caso o arquivo esteja em outra pasta, o prefixo do nome do arquivo precisa ser o nome da pasta/nome do arquivo*/
+
+            
+        }
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        h1{
+            font-family: 'Hamburg', 'Times', 'serif'
+        }
+    </style>
+</head>
+<body>
+    <h1>Titulo</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet incidunt quas provident atque dolor harum sapiente modi voluptate itaque, veritatis tempore in officia laudantium, corporis eius quis rem! Nostrum, rem.</p>
+</body>
+</html>

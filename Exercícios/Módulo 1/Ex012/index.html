@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Videos com HTML5</title>
+</head>
+<body>
+    <h1>Inserindo videos hospedado localmente</h1>
+    <p>Este video esta hospedado no meu próprio servidor.</p>
+    <video src="video/vslzeroestrias.mp4" width="500" controls autoplay loop poster="imagem/APERTE PLAY PARA ASSISTIR O VÍDEO.png"></video>
+    <p>Pra adicionar vídeo é igual o audio, usando a tag video ele vai te dar a opção pra você achar o arquivo. Ao subir o video no site ele vai estar gigantesco, então logo a frente da tag video adicione width 500px e controls para aparecer os controles. <br> Alguns navegadores aceitam formatos específicos. Para adicionar todos os formatos de vídeo você vai abrir a tag video e dentro dela a tag source src e adicionar a primeira midia, em baixo abre outro source src e o outro formato e assim por diante. Por ultimo adicione um paragráfo dizendo que o navegador não suporta o tipo do vídeo.
+    </p>
+    <p>Formatos suportados:</p>
+    <ul>
+        <li>MP4</li>
+        <li>MKV</li>
+        <li>OGG</li>
+        <li>WEBM</li>
+    </ul>
+    <p>OBS: Usando essa Tag isso vai pesar na hospedagem, pois está pegando um vídeo da hospedagem do seu site, <mark>isso não é recomendado.</mark></p>
+    <h1>Inserindo videos do Youtube</h1>
+    <iframe width="500" height="315" src="https://www.youtube.com/embed/OzUnqQk4eOg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <p>Para fazer isso é só copiar o código de incorporação do youtube e simplesmente colar no HTML.</p>
+    <h1>Video VSL do Vimeo</h1>
+    <iframe src="https://player.vimeo.com/video/821022537?h=4460aea79f" width="640" height="564" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+    <p>Para Vimeo é o mesmo processo do YouTube.</p>
+</body>
+</html>

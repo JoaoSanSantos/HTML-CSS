@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="favicon.ico">
+    <title>Mídias em HTML5</title>
+</head>
+<body>
+    <h1>Imagens Dinâmicas</h1>
+    <p>Tente abrir esse site em vários dispositivos diferentes ou simplesmente aumente e diminua o tamanho do seu navegador.</p>
+    <picture>
+        <source media="(max-width: 750px)" srcset="imagens/fotoP.png" type="image/png">
+        <source media="(max-width: 1050px)" srcset="imagens/fotoM.png" type="image/png">
+        <img src="Imagens/fotoG.png" alt="imagem flexível">
+    </picture>
+    <p>Para deixar as imagens responsivas começamos adicionando a tag picture e dentro dessa tag uma nova tag source.media.type dessa forma você adiciona max width sempre 50 pixels a mais do tamanho da imagem, srcset coloca o nome da pasta e a foto ex: imagens/fotoM.png e em type coloca image/png. 
+        para tornar responsível você começa adicionando a maior imagem para computador, após isso abra uma nova tag source acima da que você já criou com o tamanho médio e outra em cima dessa com o tamanho pequeno. <br><br>
+        Geralmente os tamanhos são:
+    </p>
+    <ul>
+        <li>1000px para imagens grande</li>
+        <li>700px para imagens médias</li>
+        <li>300px para imagens pequenas</li>
+    </ul>
+    <h1>Reproduzindo Audios</h1>
+    <p>Aprendendo a reproduzir audios em HTML5</p>
+    <audio src="midia/audio.mp3" controls autoplay></audio>
+    <p>É bem simples, basta abrir a <abbr title="<audio>"><mark>tag audio</mark></abbr> e procurar na pasta midia e o audio que quer reproduzir. Dentro dessa tag apos selecionar a midia adiocione 2 parametros:</p>
+    <ol>
+        <li>controls</abbr></li>
+        <li>autoplay</li>
+    </ol>
+
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Listas</title>
+</head>
+<body>
+    <h1>Trabalhando com Listas</h1>
+    <h2>Listas Ordenadas</h2>
+    <OL type="A">
+        <li>Acordar</li>
+        <li>boot</li>
+        <li>Tomar Café</li>
+        <li>Escovar os dentes</li>
+    </OL>
+    <p>Para fazer essas litas, basta adicionar tag <mark>OL</mark> e logo a baixo a tag <mark>li</mark> e escrever o testo. Automaticamente já virá para a página ordenado. Você pode também modificar como isso vai aparecer se é em Numeros, letras (maiusculas ou minusculas) ou em algarismos romanos usando a tag <mark>type</mark> dentro da tag <mark>OL</mark> </p>
+<h2>Listas Não Ordenadas</h2>
+<ul>
+    <li>Pão</li>
+    <li>Leite</li>
+    <li>Bolacha</li>
+    <li>Chocolate</li></ul>
+<p>Essas listas não precisão de uma ordem específica. Para fazer isso basta abrir a tag <mark>UL</mark> e dentro dela novamente e tag <mark>LI</mark>. Da também pra alterar o estilo como nas listas ordenadas, porém só se pode usar <mark>disc, circle ou square</mark></p>
+<h2>Juntando Listas 1.0</h2>
+<ol>
+    <li>Antigas</li>
+    <ol type="A">
+        <li>Clipper</li>
+        <li>Visual Basic</li>
+        <li>Fortran</li>
+        <li>Delphi</li>
+    </ol>
+    <li>Novas</li>
+    <ol type="A">
+        <li>PHP</li>
+        <li>Python</li>
+        <li>Java</li>
+        <li>Kotlin</li>
+    </ol>
+</ol>
+<p>Dessa forma as listas ficam com sublistas. É só após você criar o primeiro item da lista, adicionar a <mark>Tag OL</mark> e iniciar com uma nova <mark>Tag LI</mark>, fazendo assim uma lista dentro de outra.</p>
+<h2>Meus Jogos Favoritos</h2>
+<ol>
+    <li>NES</li>
+    <ol>
+        <li type="disc">Mario</li>
+        <li type="disc">DK</li>
+    </ol>
+    <li>SNES</li>
+    <ol>
+        <li type="disc">Mario</li>
+        <li type="disc">DK</li>
+    </ol>
+    <li>Playstation</li>
+    <ol>
+        <li type="disc">GOW</li>
+        <li type="disc">GTA</li>
+        <li type="disc">NFS</li>
+        <ol>
+            <li type="circle">Most Wanted</li>
+            <li type="circle">Underground</li>
+        </ol>
+    </ol>
+</ol>
+<p>Se você quiser mudar todos os OL para UL sem precisar mudar um por um, basta clicar no meio entre OL e segura ALT, feito isso clica nas próximas tags OL, sem soltar a tecla ALT, é só apagar e digitar o U para formar a nova Tag UL e precionar enter.</p>
+<h2>Lista de Definições</h2>
+<dl>
+    <dt>HTML</dt>
+    <dd>Linguagem de Marcação para criação de conteúdo de um site</dd>
+    <dt>CSS</dt>
+    <dd>Linguagem de marcação para a criação de Design de um site</dd>
+</dl>
+<p>Listas de definições usa-se 3 Tags.
+    <ol>
+            <li>dl</li>
+            <ol>
+                <li type="disc">dt</li>
+                <li type="disc">dd</li>
+            </ol>
+    </ol>
+</p>
+<p>Primeiramente abre-se a Tag dl e dentro dela as tags dt para o termo e dd para a definição desse termo</p>
+</body>
+</html>

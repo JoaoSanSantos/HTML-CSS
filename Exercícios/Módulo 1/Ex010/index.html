@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Trabalhando com Links</title>
+</head>
+<body>
+    <h1>Usando Links Externos</h1>
+    <p>Você pode acessar o meu <a href="https://gustavoguanabara.github.io/" rel="external">repositório público no GitHub</a> e você pode acessar minha <a href="https://dev-sweetbody.pantheonsite.io/" rel="external" target="_blank">página de vendas.</a> </p>
+    <p>O primeiro link levará você a um site externo, porém não abrirá uma nova aba. Já no segundo link ele abrirá uma nova aba para um link externo. Para fazer a primeira opção é colocar o link dentro da <mark>tag A</mark> e a segunda opção é após colocar o link na <mark>tag A</mark> adicione logo após as " (aspas) do link a tag <mark>target="_blank"</mark>... Dessa forma ira abrir uma nova aba para o link externo. Lembre-se: logo após a tag target dve se adicionar rel="external" indicando uma página externa.</p>
+    <h1>Usando Links Internos</h1>    
+        <p>Essa é a página 1, para acessar a segunda página  <a href="pag002.html" rel="next">  Clique Aqui</a> </p>
+ <p>Primeiro você deve criar um <mark>novo arquivo</mark> abaixo do index.  Para usar link interno é usado a <mark>mesma tag</mark>. dentro do " " você vai precionar <mark>ctrl+espaço</mark> e vai mostrar as pastas que você criou. Deve-se adicionar também a rel="next" e na página 2 a rel="prev"</p>  <br>
+ <p>Você também pode acessar a <a href="noticias/pag003.html" rel="next">Página 3</a></p>
+ <p>Caso o link interno esteja dentro de uma pasta, basta precionar ctrl+espaço e aparecerá todos os arquivos e pastas e procurar pela pasta que você criou e pelo novo arquivo.</p>
+<p>Para voltar de uma página que esta em outra pasta, as teclas ctrl+epaço não vai funcionar. Eentão basta digitar <mark>../</mark> e aparecerá a página da outra pasta para você adicionar e ao adicionar ./ significa para voltar dentro da mesma pasta.</p>
+<h1>Links Para Downloads</h1>
+<ul>
+    <li><a href="Livro/LIVRO_OSCA_DIGOSDOMILHA_O(3).pdf" download="Codigo do Milhao" type="Application/pdf">Os Códigos do Milhão</a></li>
+</ul>
+<p>A tag é a mesma para enviar para outra página, mas em seguida ao invés de adicionar rel:"" adiciona a tag <mark>dowload="nome do arquivo"</mark> e em seguida <mark>type="application/pdf"</mark> . pdf se for pdf e zip se for zip e por ai vai.</p>
+</body>
+</html>
