@@ -71,3 +71,43 @@ OBS: Os valores do transform translate precisa ser negativo!
 
 CAPITULO 20 - Criando New Project Cordel Moderno.
 
+Descrevendo processo HTML: Foram separados no body 3 tags.
+
+1° Header, para fazer o cabeçalho. Dentro do header tivemos um H1 para determinar o título e um parágrafo para créditos ao autor da poesia.
+
+2° Sections, para dividir o conteúdo. Dentro de cada section tivemos paragrafos para o conteúdo escrito.
+Os paragrafos foram determinados Class para cade um deles, alguns com Class Normal e outros com Class Imagem. As Class imagem ganharam ID para separa-los para aplicar css separadamente.
+
+3° Footer, para definir o Rodapé. Dentro do rodapé foi adicionado apenas um parágrafo para determinar os créditos ao criador do site.
+
+Descrevendo processo CSS: 
+
+Definiu-se primeiro o header, a section e o footer, cada um com suas configurações de backgrounds e cores de letras. Além disso foi definido padding, text aling e text heigh (espaçamento em 'EM').
+
+Após essas configurações definiu-se como seria o site inteiro usando a tag * adicionando margin 0 e pading 0.
+
+Adicionou-se as fontes com a tag @import url
+
+adicionou-se :root para adicionar as fontes de maneira mais rápida, adicionando no root 3 fontes diferentes.
+
+Foi definido que o HTML e o BODY teriam: min-height: 100vh;
+        background-color
+        font-family
+
+Após isso abriu-se outras tags separadas para o Header que foi o Header>h1 e header>p para atribuir as diferentes caracteristicas de cada um deles.
+
+para os links usando a tag 'a' definiu-se o texto, o estilo da fonte e a cor.
+
+Abrindo a tag a:hover definiu-se o efeito que teria ao passar o mouse por cima de cada link, dessa forma definiu-se underline.
+
+a Section foi separada em 5 partes:
+
+1° Section.Normal para definir suas atribuições como background e cor de fonte.
+
+2° Section.Imagem para definir suas atribuições como background e cor de fonte.
+
+3° Section.Image > p para definir suas atribuições como background e cor de fonte.
+
+4° Section#img1 para definir a imagem de fundo 
+
+5° Section#img2 também para definir uma imagem de fundo direfente da sessão anterior.
