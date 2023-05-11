@@ -68,3 +68,5 @@ transform: translate(-50%, -50%);
 
 Assim ambos ficarão centralizados no meio da tela.
 OBS: Os valores do transform translate precisa ser negativo!
+
+CAPITULO 20 - Criando New Project
