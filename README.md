@@ -149,14 +149,135 @@ Na primeira aula foi usado somente table > tr > td, dessa forma abaixo
         </tr>
     </table>
 
-Aula 2 - Alinhando o conteúdo em Tabelas
+Aula 2 - Alinhando o conteúdo em Tabelas pequenas
 
 O alinhamento, pode ser horizontal e vertical. Para horizontal pode usar text-align e para vertical usa-se vertical-align
 
 Se for numero, cria-se uma class para cada td que for numero e faz o alinhamento como descrito acima.
 
-Aula 3 - Tags semanticas para tabelas
+Aula 3 - Criando Tabelas Grandes
+
+Anatomia de tabelas grandes:
+        Table
+                Thead
+                        TR, TD, TH
+                Tbody
+                        TD, TD, TH
+                Tfoot
+                        TR, TD, TH
 
 
+Mesmo que fique bagunçado e tfoot fique logo após thead, a semantica não deixará ele aparecer no meio da tabela, já vai organizar ele no rodapé.
+
+A base de dados ficou assim:
+
+ <table>
+        <thead>
+            <tr>
+                <th>Estado</th>
+                <th>População</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>São Paulo</td>
+                <td class="num">45.919.049</td>
+            </tr>
+            <tr>
+                <td>Minas Gerais</td>
+                <td class="num">21.168.791</td>
+            </tr>
+            <tr>
+                <td>Rio de Janeiro</td>
+                <td class="num"> 17.264.943</td>
+            </tr>
+            <tr>
+                <td>Bahia</td>
+                <td class="num">14 659 023</td>
+            </tr>
+            <tr>
+                <td>Paraná</td>
+                <td class="num">11 835 379</td>
+            </tr>
+            <tr>
+                <td>Rio Grande do Sul</td>
+                <td class="num">11 088 065</td>
+            </tr>
+            <tr>
+                <td>Pernambuco</td>
+                <td class="num">9 051 113</td>
+            </tr>
+            <tr>
+                <td>Ceará</td>
+                <td class="num">8 936 431</td>
+            </tr>
+            <tr>
+                <td>Pará</td>
+                <td class="num">8 442 962</td>
+            </tr>
+            <tr>
+                <td>Santa Catarina</td>
+                <td class="num">7 762 154</td>
+            </tr>
+            <tr>
+                <td>Goiás</td>
+                <td class="num">6 950 976</td>
+            </tr>
+            <tr>
+                <td>Maranhão</td>
+                <td class="num">6 800 605</td>
+            </tr>
+            <tr>
+                <td>Espírito Santo</td>
+                <td class="num">4 108 508</td>
+            </tr>
+            <tr>
+                <td>Paraíba</td>
+                <td class="num">4 030 961</td>
+            </tr>
+            <tr>
+                <td>Amazonas</td>
+                <td class="num">3 952 262</td>
+            </tr>
+            <tr>
+                <td>Mato Grosso</td>
+                <td class="num">3 035 122</td>
+            </tr>
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <th>Total de Habitantes</th>
+                <td class="num"><strong>210 147 125</strong></td>
+            </tr>
+        </tfoot>
+
+Aula 4 - Caption e Escopo de títulos em tabelas
+
+Caption = Legenda
+
+caption vem antes de thead
+
+OBS: Th significa título e TD significa dado.
+
+Todo th tem scope='col' ou scope='row'
+
+Scope col é para titulos onde os dados estão em coluna logo abaixo, no caso do Thead. Já o Scope row é para titulos onde os dados estão em linha ao lado,no caso do tfoot.
+Caso queira diminuir a largura da tabela somente em um lado, exemplo na população, basta após o scope de 'th população' adicionar Style="width: px"
+
+Aula 5 - Efeito Zebrado na tabela
+
+Geralmente quando tem uma tabela com muitos dados, fica difícil acompanhar com os olhos os dados corretamente. Então para não ter essa dificuldade adiciona-se o efeito zebrado.
+
+Em style adiciona-se
+
+tbody > tr:nth-child(2n) {
+            background-color: lightgray;
+        }
+
+O '2n' significa o numero de linhas, ou seja, ficou zebrado uma linha sim e uma linha não. Podemos tambem adicionar impar ou par usando odd ou even. 
+
+Caso o fundo não seja braco, é interessante especificar a formula acima 2 vezes, uma cor especifica para colunas odd(impar: 1, 3, 5, 7) e even(par: 2, 4, 6, 8). Se o fundo for branco é só fazer uma tbody e fica tudo certo
 
 
