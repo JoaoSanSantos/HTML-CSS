@@ -111,3 +111,52 @@ a Section foi separada em 5 partes:
 4° Section#img1 para definir a imagem de fundo 
 
 5° Section#img2 também para definir uma imagem de fundo direfente da sessão anterior.
+
+Capitulo 21 - Tabelas
+
+Aula 01 - Introdução
+
+Aula 02 - Criando Tabela
+
+Tag Table.
+
+hierarquia de tabela simples
+
+Table > Table Row(tr) > Table Header > Table Data (TD)
+
+Na primeira aula foi usado somente table > tr > td, dessa forma abaixo
+
+ <table>
+        <tr>
+            <td>A1</td>
+            <td>B1</td>
+            <td>C1</td>
+        </tr>
+        <tr>
+            <td>A2</td>
+            <td>B2</td>
+            <td>C2</td>
+        </tr>
+        <tr> 
+            <td>A3</td>
+            <td>B3</td>
+            <td>C3</td>
+        </tr>
+        <tr>
+            <td>A4</td>
+            <td>B4</td>
+            <td>C4</td>
+        </tr>
+    </table>
+
+Aula 2 - Alinhando o conteúdo em Tabelas
+
+O alinhamento, pode ser horizontal e vertical. Para horizontal pode usar text-align e para vertical usa-se vertical-align
+
+Se for numero, cria-se uma class para cada td que for numero e faz o alinhamento como descrito acima.
+
+Aula 3 - Tags semanticas para tabelas
+
+
+
+
