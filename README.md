@@ -400,3 +400,28 @@ Caso o arquivo estiver em pasta diferente, basta localizar o caminho como descri
 
 Nessa situação o iframe funciona normalmente.
 
+É possível adicionar em uma lista UL>LI
+links para páginas, mas de uma forma que ela não saia dessa página e sim apareça a pagina externa em um iframe.
+Para fazer isso, seu iframe precisa, OBRIGATÓRIAMENTE, ter um name (nome)
+para que então você consiga dar um direcionamento do seu link para o iframe.
+
+Vimos que ao envelopar um link podemos direciona-lo para uma página externa usando target:_blank, más é possível direciona-la para um iframe usando target:(nome dado ao iframe.)
+Dessa forma o site externo aparecerá em seu iframe de forma simples.
+
+Aula 5 - Conteúdo no iframe por código
+
+Quando recarregamos a página, o iframe fica uma tela em branco. Podemos mudar isso indo no src do iframe para abrir a primeira página exemplo: 
+
+        <iframe name="frame" src="paginas-extras/pag001.html" >
+
+Porém temos um parâmetro novo que no lugar de src, criamos outro parametro que é o srcdoc, podendo adicionar textos ou imagens.
+Textos:
+
+         <iframe name="frame" srcdoc="<h1> Escolha uma das opções acima</h1>"
+
+Imagens: 
+
+         <iframe name="frame" srcdoc="<h1> Escolha uma das opções acima</h1> <img src='imagens/teste01.png'>" >
+
+o código <img src='imagens/teste01.png'> PRECISA ESTAR ABERTO E FECHADO POR <> E POR '' (ASPAS SIMPLES)
+
