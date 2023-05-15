@@ -278,6 +278,80 @@ tbody > tr:nth-child(2n) {
 
 O '2n' significa o numero de linhas, ou seja, ficou zebrado uma linha sim e uma linha não. Podemos tambem adicionar impar ou par usando odd ou even. 
 
-Caso o fundo não seja braco, é interessante especificar a formula acima 2 vezes, uma cor especifica para colunas odd(impar: 1, 3, 5, 7) e even(par: 2, 4, 6, 8). Se o fundo for branco é só fazer uma tbody e fica tudo certo
+Caso o fundo não seja braco, é interessante especificar a formula acima 2 vezes, uma cor especifica para colunas odd(impar: 1, 3, 5, 7) e even(par: 2, 4, 6, 8). Se o fundo for branco é só fazer uma tbody e fica tudo certo.
 
+Aula 6 - Cabeçalho fixo
 
+Para fazer um cabeçalho fixo na tabela pra que ela role pra baixo somente na tabela, é simples.
+Basta em Style, adicionar:
+
+         thead > tr > th {
+            position: sticky;
+            top: -1px;
+            background-color: gray ;
+        }
+
+Dessa forma, seu cabeçalho ficará fixo durante a rolagem da tabela. Se tive texto abaixo da tabela, o cabeçalho irá sumir junto com a rolagem.
+
+Aula 7 - Mesclagem de Células
+
+Rowspan e colspan, são usados para fazer uma célula ocupar duas ou mais linhas ou duas ou mais colunas.
+
+Basta, adicionar essa tag dentro do td que deseja ocupar mais linhas ou colunas dessa forma:
+
+     <tr>
+            <td>A</td>
+            <td colspan="2">B</td>
+            
+        </tr>
+        <tr>
+            <td rowspan="3">A</td>
+            <td>B</td>
+            <td>C</td>
+        </tr>
+        <tr>
+            
+            <td>B</td>
+            <td>C</td>
+        </tr>
+        <tr>
+            
+            <td>B</td>
+            <td>C</td>
+        </tr>
+
+Aula 8 - Desafio 13
+
+Concluido 
+
+Aula 9 - Exemplo de Tabela Completa
+
+exercidio feito
+
+Aula 10 - Escopos de Grupo
+
+Como escrito a algumas aulas atrás existem escopos diferentes para linhas e colunas, mas também existe grupos de linhas e grupos de colunas.
+Rowgroup é para th que tem mais de uma linha representado.
+Colgroup é para th que tem mais de uma coluna representado.
+
+Relembrando: th/col é para coluna, th/row é para linhas. th/colgroup é para grupos de colunas e th/rowgroup para grupos de linhas
+
+Aula 11 - Exercício
+
+Feito
+
+Aula 12 - Agrupando Colunas com Colgroup
+
+Temos um pequeno problema. Quando a tabela é muito grande ex 500 linhas, como mudar o estilo de apenas uma coluna, sem precisar alterar um por um colocando class?
+
+Dentro de table, é possivel criar uma nova tag que é a colgroup. Dentro dela você vai criar outra tag chamada col. 
+O numero de 'col' vai ser de acordo com o número de colunas que tiver a sua tabela.
+
+Feito isso, basta dar uma class para cada um, ir em style e digitar 'col.nomedaclass, ex: 
+
+        col.cnome{
+            background-color: greenyellow;
+        }
+
+Feito isso, sua coluna inteira terá um estilo, sem precisar adicionar um por um.
+Caso queira pegar também um unico estilo para duas ou mais colunas, basta definir na tag 'col' SPAN="2", por exemplo, dessa forma pegará 2 colunas ou o numero de colunas que você adicionar. 

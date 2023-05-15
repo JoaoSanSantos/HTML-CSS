@@ -25,6 +25,12 @@
             border-collapse: collapse;
         }
 
+        thead > tr > th {
+            position: sticky;
+            top: -1px;
+            background-color: lightgray;
+        }
+
         th {
             background-color: lightgray;
         }
@@ -46,6 +52,9 @@
             background-color: green;
         }
 
+        tfoot > tr > th {
+            text-align: left;
+        }
         
 
         
@@ -72,6 +81,7 @@
             <tr>
                 <td>Fechar Fundo Embutido</td>
                     <td class="num">0.41/0.42/0.35/0.35/###</td>
+                    
                 <td class="num">Overlock</td>
                 <td class="num">2,54</td>
                 <td class="num">4</td>
@@ -314,8 +324,8 @@
         </tbody>
         <tfoot>
             <tr>
-                <th scope="row">Qualidade Boa ( )  Ruim ( )</th>
-                <td>Tempo Padrão:</td>
+                <th scope="row" colspan="5">Qualidade Boa ( )  Ruim ( )</th>
+                <td colspan="4">Tempo Padrão:</td>
             </tr>
         </tfoot>
     </table>
