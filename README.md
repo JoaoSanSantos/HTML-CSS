@@ -425,3 +425,13 @@ Imagens:
 
 o código <img src='imagens/teste01.png'> PRECISA ESTAR ABERTO E FECHADO POR <> E POR '' (ASPAS SIMPLES)
 
+Aula 6 - Incovenvenientes do iframe
+
+As vezes o bot do google pode ter problemas para indexar o iframe, fazendo com que seu site não seja tão bem ranqueado.
+Se o site não for responsívo, vai aparecer todo quebrado no iframe.
+Cuidado com os sites que você coloca no iframe, você pode sofrer ataques de hackers.
+Mas como me protejer disso?
+
+Aula 7 - Tornando iframes mais seguros
+
+Existem algumas regras que podemos utilizar para proteger nossos iframes.
