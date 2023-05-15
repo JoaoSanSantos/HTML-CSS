@@ -355,3 +355,15 @@ Feito isso, basta dar uma class para cada um, ir em style e digitar 'col.nomedac
 
 Feito isso, sua coluna inteira terá um estilo, sem precisar adicionar um por um.
 Caso queira pegar também um unico estilo para duas ou mais colunas, basta definir na tag 'col' SPAN="2", por exemplo, dessa forma pegará 2 colunas ou o numero de colunas que você adicionar. 
+
+Aula 13 - Tabelas Responsivas
+
+Envelopa a table inteira em uma DIV com id e em style adiciona            
+        div#nomedoid {
+                overflow-x: auto;
+            }
+
+Dessa forma a barra de rolagem vai ficar somente na tabela e não na página inteira.
+
+Módulo 4 - Capitulo 22 - Aula 1 - Iframe:
+
