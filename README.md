@@ -384,3 +384,19 @@ OBS: Nem todos os sites dão permissão para usa-los em iframe
 
 Aula 3 - Conteúdo Local no iframe
 
+Dentro da tag iframe é possivel adicionar páginas internas como foi colocado a tabela do módulo anterior.
+Também é possível definir o local onde esse frame irá aparecer usando em CSS as tags 
+
+         iframe {
+            display: block;
+            margin: auto;
+        }
+
+Aula 4 - Navegação no iframe
+
+Caso o arquivo estiver em pasta diferente, basta localizar o caminho como descrito abaixo: 
+
+        <iframe src="paginas-extras/pag001.html" frameborder="0" height="500" width="500">
+
+Nessa situação o iframe funciona normalmente.
+
