@@ -435,3 +435,26 @@ Mas como me protejer disso?
 Aula 7 - Tornando iframes mais seguros
 
 Existem algumas regras que podemos utilizar para proteger nossos iframes.
+Uma delas é a tag sandbox="sandbox" dentro do iframe como está abaixo:
+
+    <iframe src="paginas-extras/pag004.html" sandbox="sandbox">  
+
+OBS: Foi usado um formulário básico de exemplo.   
+
+Dessa forma você vai estar bloqueando que o usuario envie dados pelo seu iframe.
+
+Outra forma é configurar o parâmentro referrerpolicy (politica de referencia)
+o valor padrão desse parametro é o 
+"no-referrer-when-downgrade" OBS:Não precisa digitar isso.
+Se você quiser tornar o que esta dentro do seu iframe um pouco mais limitado, basta colocar somente "no-referrer". Quando você faz isso, você esta dizendo que o que esta carregado no iframe não vai coletar nenhum tipo de informação do usuário.
+Caso você queira deixar que o conteúdo do iframe, nesse caso o formulário, receba alguns dados você pode colocar o seguinte parametro:
+
+    <iframe src="paginas-extras/pag004.html" sandbox="allow-same-origin">
+
+allow-same-origin ( Permitir conteúdo de mesma origem.)
+
+Ao apertar ctrl + espaço vai aparecer outros parametros. como allow-forms; allow-scripts etc etc.
+Adicionando mais esses dois parametros você esta dizendo que para esse iframe você permite coisa da mesma origem, uso de formulários e scripts. Todo o resto continua ligado na segurança.
+
+Aula 8 - Dicas para iframes melhores
+
