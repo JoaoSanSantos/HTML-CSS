@@ -367,3 +367,20 @@ Dessa forma a barra de rolagem vai ficar somente na tabela e não na página int
 
 Módulo 4 - Capitulo 22 - Aula 1 - Iframe:
 
+Na aula 1 foi usado a tag iframe no meio de um parágrafo, onde foi possivel visualizar um site inteiro em uma pequena janela (bloco)
+
+Aula 2 - Configurando iframes
+
+Tamanho padrão do iframe é de 300x150.
+Para alterar os tamanhos é só mudar em style o width e height (tamanho e largura)
+
+É possível mudar fora do CSS logo na tag iframe, mas se houver alteração no CSS o que vai valer é o CSS.
+
+Existe um parâmetro de rolagem, caso não tenha, você pode adicionar na tag iframe 'solling' com as opções AUTO(Se for necessário vai aparecer); Yes (independente se é necessario ou não); No (Não vai permitir rolagem, porem em alguns navegadores deixam.)
+
+É possivel personalizar a borda também na CSS usando border: px solid black.
+
+OBS: Nem todos os sites dão permissão para usa-los em iframe
+
+Aula 3 - Conteúdo Local no iframe
+
