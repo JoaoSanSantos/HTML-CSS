@@ -463,3 +463,56 @@ Videos, mapas e documentos do google docs (creio que de outros lugares também).
 
 Capitulo 23 - Aula 1 - Criando um Projeto do Zero
 
+Feito
+
+Capitulo 24 - Aula 1 - Formulário
+
+Para iniciar um formulario, ele precisa estar entre as tags 
+<form></form>. Feito isso, cada parágrafo que criar dentro dele será um conteúdo do Formulário, como nome, sobrenome etc.
+Para fazer esses campos virarem de fato um formulário precisa adicionar logo após o conteúdo do parágrafo a tag input:text (para texto) e input:submit (para botão).
+É importante saber que não existe até o momento uma ligação entre o seu texto e sua caixa, precisa antes de algumas informações para que fique de forma util.
+Caso aquela barra que aparece os nomes para completar automaticamente esteja atrapalhando, é só adicionar dentro da tag form o parametro autocomplete:off
+
+Aula 2 - Label
+
+Para enviar o formulário para algum lugar ele precisa de um diretório.
+Foi usado de exemplo o php.
+Dentro da tag form, adiciona-se o parametro action="cadastro.php"
+
+Para fazer a ligação da caixa do nome e do sobrenome, precisa adicionar as label (etiqueta). É necessário todo texto ter um nome e um id que já aparecem quando adiciona input.
+Para adicionar label, envelopa o texto do paragrafo com a tag label e adiciona o nome que está no ID.
+Ao enviar esses dados, ele fica na barra de URL do navegador indicando, nesse caso, qual o nome e o sobrenome. Mas como fazer para sumir com isso no caso de senhas?
+
+Aula 3 - Métodos Get e Post
+
+Get já é um método padrão, é esse método que faz com que apareça os dados após o envio do formulário na URL.
+O método Post some com esses dados, para usa-lo, na tag form, adiciona-se o parametro method=post, dessa forma os dados não ficam na URL.
+Não significa que os dados estão protegidos, somente não estão aparecendo visualmente na URL.
+Existe uma maneira de ver esses dados. 
+Inspecionando o formulário na aba Network aparecerá o arquivo pra onde está indo esses dados e consequentemente os dados enviados. 
+Para proteger 100% os dados é preciso usar HTTPS.
+Usa-se o método post quando os dados não forem sensíveis, como nome, peso, idade, etc.
+Quando se envia dados por get só pode ser enviado 3000 bits ou 3000 letras.
+No caso de dados sensiveis, imagens e outros o método a ser usado é o post, que inclusive não tem o limite de 3000bits.
+
+Aula 4 - Criando caixa de texto e senha
+
+No formulário já criado, existe um problema. Quando você aperta no botão de enviar, mesmo sem nenhum dado ele envia mesmo assim. Isso é pq esta faltando alguns atributos.
+
+Dentro da tag imput, para fazer com que o campo seja obrigatório, adiciona-se required como parametro.
+Pode definir também o tamanho do conteúdo que será digitado.
+Em input também logo após required, adiciona-se minlength="5" (minimo) e maslength="15" (máximo)
+
+Outro parametro, ainda em input é o SIZE, que delimita quantas letras vai caber no quadro, caso exceda esse valor, criará uma rolagem lateral.
+
+Da também pra colocar um texto indicativo no balão, ainda em input, adiciona-se placeholder e o que quer que esteja escrito.
+
+O autocomplete pode ser usado não só na tag form, como também em input.
+Quando em form o autocomplete estiver ligado, adiciona ele em input em cada caixa indicando o que é.
+Por exemplo na caixa de usuario coloca-se autocomplete="username".
+Na caixa de senha tem 2 tipos diferentes, tem o autocomplete="current-password" e o 
+autocomplete="new-password".
+O currente-password é usado para login e o New password é usado para cadastro.
+
+Aula - 5 Number, month, date e time
+
