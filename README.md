@@ -516,3 +516,13 @@ O currente-password é usado para login e o New password é usado para cadastro.
 
 Aula - 5 Number, month, date e time
 
+Criando o input:number abre uma caixa só para numeros. 
+Se o conteúdo a ser digitado nessa caixa forem numeros inteiros, basta definir só o maxlength e o minlangth(0).
+Se precisar de numero quebrados, adiciona-se o parametro step e colocar por exemplo 0.5 ou 0.1;
+
+Criando input:month, você da a opção de selecionar mês e ano. Adicionando a tag value, você pode definir uma data base atual que aparecerá automaticamente como descrito abaixo:
+value="2023-05"
+
+O input:date é a mesma coisa do month, o que muda é que será adicionado o dia do ano.
+
+E o input:time mostra as horas.
