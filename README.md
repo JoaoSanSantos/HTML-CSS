@@ -530,3 +530,65 @@ E o input:time mostra as horas.
 Aula 6 - Compatibilidade com navegadores
 
 Todo navegador é diferente um do outro. O safari do desktop é o pior deles.
+
+Aula 7 - Formulário com Telefone e email
+
+telefone e o email não tem tanta diferença dos outros acima.
+input:tel para telefone e input:email para email.
+Porém, para telefone tem um parâmetro chamado pattern que é usado para conter uma expressão regular.
+Toda expressão regular começa com ^ e termina com $.
+Exemplo abaixo:
+
+pattern="^[0-9]{4}-[0-9]{4}$"
+
+Isso significa que vai ler digitos de 0 a 9 e os primeiros digitos serão 4 - os segundos digitos depois da barra também serão lidos de 0 a 9 e serão também 4 digitos.
+A expressão acima é para numeros simples, para celular muda para:
+
+pattern="^[0-9]{4,5}-[0-9]{4}$"
+
+ou pode ser escrito dessa outra forma
+
+pattern="^\d{4,5}-\d{4}$"
+
+Para colocar ddd
+
+pattern="^\(\d{2}\)\d{4,5}-\d{4}$"
+
+Outra coisa que pode ser feito é agrupar tudo isso (nome, email, telefone) em uma tag chamada fieldset, feito o agrupamento, entre a tag fieldset e o primeiro paragrafo adiciona outra tag chamada legend. O fieldset vai fazer uma borda agrupando o formulario e a tag legend vai dar um titulo pra isso, que pode ser por exemplo 'dados pessoais'.
+
+Aula 8 - Checkbox e Radio Button
+
+A checkbox como o nome já diz é uma caixa para confirmar opções.
+No caso abaixo foi usado esportes:
+
+     <fieldset>
+
+        <legend>Esportes favoritos</legend>
+
+        <input type="checkbox" name="esbas" id="iesbas"> <label for="iesbas">Basquete</label> <br>
+
+        <input type="checkbox" name="esfut" id="iesfut"> <label for="iesfut">Futebol</label><br>
+
+        <input type="checkbox" name="esvo" id="iesvo"> <label for="iesvo">Vôlei</label> <br>
+
+    </fieldset>
+
+Dentro de fieldset foi adicionado legend para dar legenda ao fieldset e o input:checkbox. Fora da tag foi dado o nome dessa caixinha e esse nome foi envelopado em label, para que a caixinha fosse selecionada ao clicar em cima do nome.
+
+O input:radio serve para selecionar sexo.
+Exemplo de html abaixo:
+
+     <fieldset>
+
+        <legend>Sexo</legend>
+
+        <input type="radio" name="sexo" id="isxmas"> <label for="isxmas">Masculino</label>
+
+        <input type="radio" name="sexo" id="isxfem"> <label for="isxfem">Feminino</label>
+
+    </fieldset>
+
+Dentro de um novo fieldset, foi adicionado novamente a tag legend e o input:radio.
+É sempre 1 input para uma caixa diferente, nesse cado do input radio, é necessário que o NAME seja o mesmo, no caso acima esta 'sexo'. Caso o name seja diferente, ao selecionar um sexo, você não consegue tirar essa seleção ao selecionar o outro, nesse caso os dois ficarão marcados, por isso o name deve ser igual, para poder alternar de um para o outro.
+Caso queira que um dos dois já esteja selecionado quando o usuario acessar o formulário, basta adicionar o parametro, dentro do input, checked. Dessa forma ele já aparecerá selecionado.
+É necessário dentro de cada input:radio adicionar o padrão Value definindo um nome como M para masculino e F para feminino, se não ao enviar aparecerá como ON.
