@@ -526,3 +526,7 @@ value="2023-05"
 O input:date é a mesma coisa do month, o que muda é que será adicionado o dia do ano.
 
 E o input:time mostra as horas.
+
+Aula 6 - Compatibilidade com navegadores
+
+Todo navegador é diferente um do outro. O safari do desktop é o pior deles.
