@@ -1046,5 +1046,150 @@ Tv: 1201px acima*/
     img#tv {display: block;}
 }
 
-Aula 9 - Menu Responsivo
+Aula 9 e 10 - site com menu responsivo
 
+html
+
+    <!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Query</title>
+    <link rel="stylesheet" href="estilos/style.css">
+</head>
+<body>
+    <header>
+        <h1>Meu Site</h1>
+        <menu>
+            <ul>
+                <li><a href="#">opção 1</a></li>
+                <li><a href="#">opção 2</a></li>
+                <li><a href="#">opção 3</a></li>
+                <li><a href="#">opção 4</a></li>
+                <li><a href="#">opção 5</a></li>
+            </ul>
+        </menu>
+    </header>
+    <main>
+        <article>
+            <h2>Testando Media Queries</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, asperiores porro praesentium esse assumenda architecto aliquid cum voluptates minima perferendis deserunt aut doloribus sequi ipsa, consectetur, error temporibus magnam alias?</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate magnam velit commodi incidunt voluptate id assumenda quaerat rerum doloribus totam laborum optio, ipsam quas aspernatur ratione. Quis animi nam iusto.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, natus. Obcaecati molestias recusandae, unde autem nesciunt reprehenderit aperiam provident iusto animi. In soluta illum, modi possimus aliquid iure? Amet, recusandae!</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus magni velit excepturi corporis, fugit commodi. Aspernatur optio nostrum iure cum deleniti, accusantium aut consequatur quam aliquid culpa, eum esse tempora.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum neque possimus delectus sapiente molestias ipsam repellat at totam doloribus ad alias sit, rerum repudiandae, laudantium eveniet. Cupiditate, ducimus ab. Vitae.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat corrupti et molestiae quos adipisci repellat beatae odio suscipit, reprehenderit dicta minima quas dolores, placeat dolorem, nostrum velit! Distinctio, magnam laboriosam?</p>
+        </article>
+    </main>
+</body>
+</html>
+
+CSS 
+
+    @charset "UTF-8";
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: lightgray;
+}
+
+header {
+    background-color: grey;
+}
+
+header > h1 {
+    padding: 10px;
+    text-align: center;
+}
+
+menu {
+    display: block;
+}
+
+menu > ul {
+    list-style-type: none;
+}
+
+menu > ul > li > a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    text-align: center;
+    background-color: rgb(87, 87, 87);
+    color: white;
+    border-top: 2px solid grey;
+}
+
+menu > ul > li > a:hover {
+    background-color: grey;
+}
+
+main {
+    width: 90vw;
+    background-color: white;
+    margin: auto;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+article > h2 {
+    padding-bottom: 20px;
+    text-align: center;
+
+}
+
+article > p {
+    text-align: justify;
+    margin-bottom: 20px;
+    text-indent: 20px;
+}
+
+Aula 11 - Criando menu Hambúrguer
+
+Para Criar o Menu hamburguer é simples, da pra ussar o código do google api: <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+No html abaixo do h1 e acima do menu adiciona-se a tag i com a class material-icon e se quiser pode dar um id também. Dessa forma é só escolher o icone através do nome, no exemplo abaixo o nome esta menu.
+<i id="burguer" class="material-icons">menu</i>
+
+Em CSS 
+
+i#burguer {
+    background-color: rgb(48, 48, 48);
+    color: white;
+    display: block;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+}
+
+i#burguer:hover {
+    background-color: white;
+    color: black;}
+
+Agora vem os próximos passos:
+Passo 1: Desligar o display do menu (none)
+Passo 2: Dar um id para o menu, em html.
+Passo 3: Adicionar Javascript como o exemplo abaixo
+
+OBS: O ID dado ao menu foi 'itens'
+
+    <script> 
+        function clickMenu() {
+            if (itens.style.display == 'block'){
+                itens.style.display = 'none'
+            }
+            else {
+                itens.style.display = 'block'
+            }
+        }
+    </script>
+
+OBS: Esse script é logo abaixo da tag Main e acima da tag Body
