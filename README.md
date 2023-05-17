@@ -673,3 +673,28 @@ Textarea é uma area onde o usuario pode escrever um texto de qualquer tamanho, 
             <label for="imsg">Mensagem</label>
             <textarea name="msg" id="imsg" cols="30" rows="10"></textarea>
         </p>
+
+Aula 11 - Elemento Output 
+
+Output pode servir para somar dois numeros de campos diferentes, usando javascript.
+
+     <p>
+            <label for="in1">Numero 1:</label>
+            <input type="number" name="n1" id="in1" min="0" max="50" required oninput="isoma.innerHTML = Number(in1.value) + Number(in2.value)">
+        </p>
+        <p>
+            <label for="in2">Numero 2:</label>
+            <input type="number" name="n2" id="in2" min="0" max="50" required oninput="isoma.innerHTML = Number(in1.value) + Number(in2.value)">
+        </p>
+    <p>
+            <label for="isoma">Soma:</label>
+            <output name="soma" id="isoma">0</output>
+        </p>
+
+O output também pode dar valor a barra do range, html fica dessa forma:
+
+    <p>
+            <label for="inum">Número:</label>
+            <input type="range" name="num" id="inum" min="0" max="10" value="0" oninput="ival.innerHTML = Number(inum.value)">
+            <output id="ival">0</output>
+        </p>
