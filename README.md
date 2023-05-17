@@ -591,4 +591,85 @@ Exemplo de html abaixo:
 Dentro de um novo fieldset, foi adicionado novamente a tag legend e o input:radio.
 É sempre 1 input para uma caixa diferente, nesse cado do input radio, é necessário que o NAME seja o mesmo, no caso acima esta 'sexo'. Caso o name seja diferente, ao selecionar um sexo, você não consegue tirar essa seleção ao selecionar o outro, nesse caso os dois ficarão marcados, por isso o name deve ser igual, para poder alternar de um para o outro.
 Caso queira que um dos dois já esteja selecionado quando o usuario acessar o formulário, basta adicionar o parametro, dentro do input, checked. Dessa forma ele já aparecerá selecionado.
-É necessário dentro de cada input:radio adicionar o padrão Value definindo um nome como M para masculino e F para feminino, se não ao enviar aparecerá como ON.
+É necessário dentro de cada input:radio adicionar o padrão Value definindo um nome como M para masculino e F para feminino, se não ao enviar aparecerá como ON.É necessário dentro de cada input:radio adicionar o padrão Value definindo um nome como M para masculino e F para feminino, se não ao enviar aparecerá como ON.
+
+Aula 9 - Elementos Color ,  range e file
+
+Color é para que apareça uma paleta de cor na página.
+
+     <p>
+            <label for="icor">Cor</label>
+            <input type="color" name="cor" id="icor">
+        </p>
+
+Range irá colocar uma barra que pode ser mudada de nível, começando do zero até o 100, que pode ser alterada de 0 para 10 ou qualquer outro numero
+
+    <p>
+            <label for="inivel">Nivel de Satisfação</label>
+            <input type="range" name="nivel" id="inivel" min="0" max="10" value="0">
+        </p>
+
+File é para enviar documentos, imagens e arquivos. Lembrando sempre que o form tem que estar em Post para que não dê nenhum problema.
+
+     <p>
+            <label for="ifoto">Foto</label>
+            <input type="file" name="foto" id="ifoto">
+        </p>
+
+Aula 10 - Select, datalist e textarea
+
+Select serve para criar uma lista de escolha, no exemplo abaixo usamos Estados. Nesse formato só é possível escolher aquilo que foi delimitado pelo programador.
+
+    <p>
+            <label for="iest">Estado</label>
+
+            <select name="estado" id="iest">
+
+                <optgroup label="Região Sudeste">
+                    
+                    <option value="" selected>---Escolha---</option>
+
+                    <option value="SP">São Paulo</option>
+
+                    <option value="PR">Paraná</option>
+
+                    <option value="RJ">Rio de Janeiro</option>
+
+                </optgroup>
+
+                <optgroup label="Região XYZ">
+
+                    <option value="AM">Amapá</option>
+
+                    <option value="MT">Mato Grosso</option>
+
+                </optgroup>
+            </select>
+
+Cada option será uma opção de escolha na lista, optgroup faz um agrupamento dessas opções em um grupo especifico.
+
+Datalist é igual ao select, porém além de mostrar as opções da lista, também é um quadro digitável, caso a opção que você procrua não esteja na lista.
+
+    <label for="iprof">Profissão</label>
+
+            <input type="text" name="prof" id="iprof" list="lstprof">
+
+            <datalist id="lstprof">
+
+                <option>Administrador</option>
+
+                <option>Contabilista</option>
+
+                <option>Desenvolvedor</option>
+
+                <option>Professor</option>
+
+            </datalist>
+        </p>
+
+Textarea é uma area onde o usuario pode escrever um texto de qualquer tamanho, além de poder aumentar e diminuir o tamanho do bloco.
+
+      <p>
+            <label for="imsg">Mensagem</label>
+            <textarea name="msg" id="imsg" cols="30" rows="10"></textarea>
+        </p>
