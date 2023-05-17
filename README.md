@@ -874,4 +874,177 @@ Ou se preferir, pode criar uma pasta de css e incluir essas declarações dentro
 
 Aula 6 - Mobile First
 
-Abordagem criada em 2009 por Luke Robusk que trabalhava no yahoo e hj ta no google.
+Abordagem criada em 2009 por Luke Robusk que trabalhava no yahoo e hj ta no google.Abordagem criada em 2009 por Luke Robusk que trabalhava no yahoo e hj ta no google.
+
+Aula 7 -Criado html e css mobile first
+
+Aula 8 - Device Breackpoints
+
+Nada mais é que o tamanho de telas como (celular, tv, monitor etc.).
+
+O HTML Ficou assim:
+
+    <!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Query</title>
+    <link rel="stylesheet" href="estilos/style.css" media="all">
+    <link rel="stylesheet" href="estilos/media-query.css">
+</head>
+<body>
+    <main>
+        <h1>Testando Media Queries</h1>
+        <img id="phone" src="imagens/icon-phone.png" alt="Acessando via Smartphone">
+        <img id="tablet" src="imagens/icon-tablet.png" alt="Acessando via Tablet">
+        <img id="print" src="imagens/icon-print.png" alt="Versão para Impressão">
+        <img id="pc" src="imagens/icon-pc.png" alt="Versão Desktop">
+        <img id="tv" src="imagens/icon-tv.png" alt="Versão para Tv">
+    </main>
+
+</body>
+</html>
+
+Percebe-se que foram criados duas pastas para CSS. 
+1° Mobile First:
+
+    @charset "UTF-8";
+
+/*Versão Mobile First*/
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.3em;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100vh;
+}
+
+body {
+    background: black url(../imagens/back-phone.jpg) no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+main {
+    background-color: rgba(255, 255, 255, 0.842);
+    width: 90vw;
+    margin: auto;
+    margin-top: 20px;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    font-size: 1em;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.493);
+}
+
+img {
+    display: block;
+    margin: auto;
+}
+
+img#phone { display: block;}
+img#tablet {display: none;}
+img#print {display: none;}
+img#pc {display: none;}
+img#tv {display: none;}
+
+2° Para outros tamanhos de tela:
+
+    @charset "UTF-8";
+
+/*Todas as demais midias*/
+
+/*Typical Device Breackpoints
+-----------------------------
+Celular: 320px - 480px
+Tablet: 481px - 768px
+Desktop: 1025px - 1200px
+Tv: 1201px acima*/
+
+@media print {
+
+    * {
+        font-family: 'Courier New', Courier, monospace; 
+    }
+
+    body {
+        background-image: url(../imagens/back-print.jpg);/*desnecessário*/
+        
+        
+    }
+
+    main {
+        width: 90vw;
+        border: 2px solid black;
+    }
+
+    main::after {
+        content: 'Essa impressão foi feita por João Carlos';
+        text-decoration: underline;
+        font-size: 0.7em;
+        text-align: center;
+    }
+
+    main h1 {
+        text-shadow: none;
+        color: black;
+    }
+
+    img#phone { display: none;}
+    img#tablet {display: none;}
+    img#print {display: block;}
+    img#pc {display: none;}
+    img#tv {display: none;}
+}
+
+   
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    body {
+        background-image: url(../imagens/back-tablet.jpg);
+    }
+
+    img#phone { display: none;}
+    img#tablet {display: block;}
+    img#print {display: none;}
+    img#pc {display: none;}
+    img#tv {display: none;}
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+    body {
+        background-image: url(../imagens/back-pc.jpg);
+    }
+
+    img#phone { display: none;}
+    img#tablet {display: none;}
+    img#print {display: none;}
+    img#pc {display: block;}
+    img#tv {display: none;}
+}
+
+@media screen and (min-width: 1201px) {
+    body {
+        background-image: url(../imagens/back-tv.jpg);
+    }
+
+    img#phone { display: none;}
+    img#tablet {display: none;}
+    img#print {display: none;}
+    img#pc {display: none;}
+    img#tv {display: block;}
+}
+
+Aula 9 - Menu Responsivo
+
