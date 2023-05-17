@@ -871,3 +871,7 @@ Sempre tem que ter o @media screen e a orientação em parantese.
 Ou se preferir, pode criar uma pasta de css e incluir essas declarações dentro dela, porém não pode esquecer que a declaração de media all precisa ter a tag dela também.
 É só adicionar antes das declarações de media all o
 @media all {e as declarações aqui dentro}. Não é necessário fazer isso, mas é pra ficar organizado.
+
+Aula 6 - Mobile First
+
+Abordagem criada em 2009 por Luke Robusk que trabalhava no yahoo e hj ta no google.
