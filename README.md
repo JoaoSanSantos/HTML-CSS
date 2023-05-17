@@ -1154,7 +1154,17 @@ article > p {
 
 Aula 11 - Criando menu Hambúrguer
 
-Para Criar o Menu hamburguer é simples, da pra ussar o código do google api: <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+Para Criar o Menu hamburguer é simples, da pra ussar o código do google icon: https://m3.material.io/resources/icons.
+
+A partir daí, você vai escolher o estilo do icone. ctrl+f abre uma barra de navegação, pesquise por navigation e achará o icone menu.
+Para usa-lo você vai entrar em: https://developers.google.com/fonts/docs/material_icons?hl=pt-br.
+E procurar por fonte do icone na web.
+Um pouco mais abaixo estará o código do google web fonts.
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+
+Copia o link e cole abaixo do title.
 
 No html abaixo do h1 e acima do menu adiciona-se a tag i com a class material-icon e se quiser pode dar um id também. Dessa forma é só escolher o icone através do nome, no exemplo abaixo o nome esta menu.
 <i id="burguer" class="material-icons">menu</i>
@@ -1192,4 +1202,40 @@ OBS: O ID dado ao menu foi 'itens'
         }
     </script>
 
-OBS: Esse script é logo abaixo da tag Main e acima da tag Body
+OBS 2: Esse script é logo abaixo da tag Main e acima da tag Body
+OBS 3: Não vai ser em todos os navegadores que esse icone vai aparecer. No meu celular, por exemplo, apareceu a palavra cardápio.
+
+Aula 12 - Media queries para outros dispositivos
+
+Para tirar o hamburguinho em telas maiores:
+Cria uma aba nova para CSS e adiciona
+
+    @media screen and (min-width: 768px) {
+    i#burguer{
+        display: none;
+    }
+
+    menu { 
+        display: block;
+    }
+
+    menu > ul > li {
+        display: inline-block;
+    }
+}
+
+Nota-se que terá um erro. Se você abrir o menu hamburguer, fechar e tentar aumentar a tela, todo o menu vai sumir. 
+Para corrigir isso terá que fazer outro javascript.
+Dentro da tag body da html, adiciona-se o seguinte parametro:
+<body onresize="mudouTamanho()">
+Em seguida dentro da tag script que já havia criado para o código anterior, adiciona-se:
+
+     function mudouTamanho() {
+            if (window.innerWidth >= 768) {
+                itens.style.display = 'block'
+            }
+            else {
+                itens.style.display = 'none'
+            }
+        }
+
