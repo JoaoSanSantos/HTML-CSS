@@ -698,3 +698,8 @@ O output também pode dar valor a barra do range, html fica dessa forma:
             <input type="range" name="num" id="inum" min="0" max="10" value="0" oninput="ival.innerHTML = Number(inum.value)">
             <output id="ival">0</output>
         </p>
+
+Capitulo 25 - Aula 1 -  O que são Media Queries?
+
+Media query é necessário quando a exibição é feita para tamanhos diferentes de mídias, como celula, table, diferentes tamanhos de munitores etc.
+Media Query serve para apresentar um mesmo conteúdo ou site de diversos tamanhos diferentes.
