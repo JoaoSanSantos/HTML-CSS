@@ -702,4 +702,92 @@ O output também pode dar valor a barra do range, html fica dessa forma:
 Capitulo 25 - Aula 1 -  O que são Media Queries?
 
 Media query é necessário quando a exibição é feita para tamanhos diferentes de mídias, como celula, table, diferentes tamanhos de munitores etc.
-Media Query serve para apresentar um mesmo conteúdo ou site de diversos tamanhos diferentes.
+Media Query serve para apresentar um mesmo conteúdo ou site de diversos tamanhos diferentes.Media Query serve para apresentar um mesmo conteúdo ou site de diversos tamanhos diferentes.
+
+Aula 2 - Criando site com versão para impressora
+
+    <header>
+        <h1>Noticias</h1>
+        <menu>
+            <ul>
+                <li>Esportes</li>
+                <li>Política</li>
+                <li>Tecnologia</li>
+            </ul>
+        </menu>
+    </header>
+    <main>
+        <article>
+            <h2>Midia Quiries</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis, quis dolor. Nostrum alias voluptatibus error voluptas quae, vel fugiat tenetur cupiditate ipsum odio, veniam consequatur perferendis aperiam saepe. Sunt, voluptates?</p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, impedit adipisci, dolore expedita excepturi illum, praesentium est provident suscipit ea explicabo nisi. Autem rerum sapiente nobis dolores itaque, esse deleniti?
+            </p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci veritatis possimus dolore id illum cum sint quos amet est libero reiciendis, praesentium, rem tempora aut velit fuga earum? Consectetur, iste.</p>
+        </article>
+    </main>
+
+CSS:Impressora - 
+
+    @charset "UTF-8";
+
+/*Estilo para Impressora*/
+
+* {
+    margin: 10px;
+    padding: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1em;
+    line-height: 1.5em;
+}
+
+menu {
+    display: none;
+}
+
+article {
+    width: 100%;
+}
+
+article::after {
+    content: 'Esse artigo foi impresso através do site www.cursoemvideo.com';
+}
+
+CSS:Tela - 
+
+    @charset "UTF-8";
+
+/*Estilo para telas*/
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+    font-size: 1em;
+}
+
+header {
+    background-color: rgb(158, 158, 158);
+}
+
+header >h1 {
+    text-align: center;
+}
+
+menu ul {
+    list-style-type: none;
+    background-color: grey;
+
+}
+
+menu li {
+    background-color: rgb(75, 75, 75);
+    color: white;
+    display: inline-block;
+    padding: 10px;
+}
+article {
+    width: 600px;
+    display: block;
+    margin: auto;
+}
