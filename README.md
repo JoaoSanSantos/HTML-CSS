@@ -816,3 +816,58 @@ Quando se coloca media types, dentro dela pode ser criado também as medias feat
 
 As medias features precisam estar entre parenteses.
 O media all, significa que é para todas as midias, já os dois medias screens são específicos para telas, um será em retrato (portrait) e o outro em paisagem (landscape).
+Cada feature vai dar uma orientação para mobile quando ele estiver em pé ou deitado deixando de certa forma o site responsivo.
+
+Aula 4 - Reunindo tudo em um unico CSS
+
+Quando o projeto é pequeno, não é necessário 3 páginas de css, pois é possível agrupar tudo isso em um unico CSS.
+
+Abaixo de title abre um style e coloca suas declarações lá, da seguinte forma:
+
+     <style>
+
+        /*Declarações gerais*/
+
+                    * {
+                margin: 0px;
+                padding: 0px;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            html, body {
+                width: 100vw;
+                height: 100vh;
+                background-color: #233eff;
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
+
+            h1 {
+                color: white;
+                text-shadow: 3px 3px 0px #233eff;
+                padding: 10px;
+            }
+        /*Declarações Portrait*/
+
+            @media screen and (orientation: portrait) {
+                body {
+    background-image: url(../imagens/cev-portrait.jpg);
+    background-position: center bottom;
+}
+            }
+
+        /*Declarações Landscape*/
+
+            @media screen and (orientation: landscape) {
+                body {
+    background-image: url(../imagens/cev-landscape.jpg);
+    background-position: left bottom;
+}
+            }
+
+    </style>
+
+Sempre tem que ter o @media screen e a orientação em parantese.
+Ou se preferir, pode criar uma pasta de css e incluir essas declarações dentro dela, porém não pode esquecer que a declaração de media all precisa ter a tag dela também.
+É só adicionar antes das declarações de media all o
+@media all {e as declarações aqui dentro}. Não é necessário fazer isso, mas é pra ficar organizado.
