@@ -790,4 +790,29 @@ article {
     width: 600px;
     display: block;
     margin: auto;
-}
+}}
+
+Isso nada mais são do que MEDIA TYPES.
+
+Temos dois tipos de media acima o media screnn e o media print.
+
+Isso é definido abaixo do title, adicionando dois links pra css separados.
+Um com parametro media screen e o outro com media print (tela/impressora)
+
+Aula 3 - Multiplas Media Features com CSS
+
+Media Query = Media type + Media Features
+
+Existem dois tipos de orientações do dispositivo, são elas portrait (em pé)
+e landscape (deitado).
+
+Quando se coloca media types, dentro dela pode ser criado também as medias features, dessa forma abaixo:
+
+    <link rel="stylesheet" href="estilos/style.css" media="all">
+
+    <link rel="stylesheet" href="estilos/retrato.css" media="screen and (orientation: portrait)">
+
+    <link rel="stylesheet" href="estilos/paisagem.css" media="screen and (orientation: landscape)">
+
+As medias features precisam estar entre parenteses.
+O media all, significa que é para todas as midias, já os dois medias screens são específicos para telas, um será em retrato (portrait) e o outro em paisagem (landscape).
